@@ -1,0 +1,41 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "api/index.php",
+            "use": "@vercel/php"
+        },
+        {
+            "src": "public/**",
+            "use": "@vercel/static"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(css|js|images|fonts|favicon.ico|robots.txt).*",
+            "dest": "/public/$1"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "/api/index.php"
+        }
+    ],
+    "env": {
+        "APP_NAME": "Laravel",
+        "APP_ENV": "production",
+        "APP_KEY": "${APP_KEY}",
+        "APP_DEBUG": "false",
+        "APP_URL": "${APP_URL}",
+        "DB_CONNECTION": "mongodb",
+        "MONGODB_URL": "${MONGODB_URL}",
+        "MONGODB_DATABASE": "ig_clone_db",
+        "CACHE_DRIVER": "array",
+        "SESSION_DRIVER": "cookie",
+        "LOG_CHANNEL": "stderr",
+        "AWS_ACCESS_KEY_ID": "${AWS_ACCESS_KEY_ID}",
+        "AWS_SECRET_ACCESS_KEY": "${AWS_SECRET_ACCESS_KEY}",
+        "AWS_DEFAULT_REGION": "${AWS_DEFAULT_REGION}",
+        "AWS_BUCKET": "${AWS_BUCKET}",
+        "FILESYSTEM_DISK": "s3"
+    }
+} 
