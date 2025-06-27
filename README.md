@@ -1,6 +1,7 @@
 # IG Clone
 
-## A Social Media website with PHP and Laravel.
+## 
+A Social Media website with PHP and Laravel.
 
 ###
 
