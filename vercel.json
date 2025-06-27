@@ -1,15 +1,10 @@
 {
     "version": 2,
-    "functions": [
-        {
-            "src": "api/index.php",
-            "use": "@vercel/php"
-        },
-        {
-            "src": "public/**",
-            "use": "@vercel/static"
-        }
-    ],
+    "functions": {
+      "api/**/*.php": {
+        "runtime": "vercel-php@0.6.0"
+      }
+    },
     "routes": [
         {
             "src": "/(css|js|images|fonts|favicon.ico|robots.txt).*",
